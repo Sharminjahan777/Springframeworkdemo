@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+                "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="desktop" class="aint.electronics.Desktop">
+        <property name="deviceName" ref="deviceInfo"/>
+    </bean>
+
+
+
+    <bean id = "deviceInfo" class="aint.electronics.Device">
+        <property name="deviceMonitorSize" value="15"/>
+        <property name="deviceRamSize" value="32"/>
+    </bean>
+</beans>

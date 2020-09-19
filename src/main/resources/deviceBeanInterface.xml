@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+                "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="count" class="aint.electronics.Calculator" autowire="byName" >
+      <!--<property name ="device" ref="deviceInfo"/>-->
+    </bean>
+
+   <bean id ="deviceInfo" class="aint.electronics.Device">
+        <property name="deviceMonitorSize" value="16"/>
+        <property name="deviceRamSize" value="32"/>
+    </bean>
+
+    <bean id="modernCount" class="aint.electronics.ModernCalculator" autowire="byName">
+     <!--   <property name ="device" ref="deviceInfo"/>-->
+    </bean>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+</beans>
